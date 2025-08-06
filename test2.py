@@ -1,22 +1,15 @@
-class FirstClass:
-    def duplicate(self, x):
-        """Static method to duplicate input."""
-        return [x, x]
-    
+from Utilities import Utils
+
+class FirstClass:  
     def process(self, data):
         """Uses Duplicator.duplicate() to process data."""
-        duplicated = self.duplicate(data)
+        duplicated = Utils.duplicate(data)
         return f"FirstClass processed: {duplicated}"
     
-
 class SecondClass:
-    def duplicate(self, x):
-        """Static method to duplicate input."""
-        return [x, x]
-    
     def display(self, item):
         """Uses FirstClass.duplicate() in a different way."""
-        duplicated = self.duplicate(item)
+        duplicated = Utils.duplicate(item)
         return f"SecondClass displayed: {duplicated}"
 
     def print_example(self):

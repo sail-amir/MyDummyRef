@@ -1,7 +1,9 @@
-from Utils import duplicate
-
 class FirstClass:
+    def duplicate(x):
+        """Static method to duplicate input."""
+        return [x, x]
+    
     def process(self, data):
         """Uses Duplicator.duplicate() to process data."""
-        duplicated = duplicate(data)
+        duplicated = self.duplicate(data)
         return f"FirstClass processed: {duplicated}"

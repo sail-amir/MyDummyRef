@@ -9,11 +9,7 @@ class FirstClass:
         return f"FirstClass processed: {duplicated}"
 
 
-class SecondClass:
-    def duplicate(self, x):
-        """Same implementation as in FirstClass."""
-        return [x, x]  # Exact clone of FirstClass.duplicate()
-    
+class SecondClass(FirstClass):     
     def display(self, item):
         """Uses duplicate() in a different way."""
         duplicated = self.duplicate(item)

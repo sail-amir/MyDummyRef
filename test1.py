@@ -10,13 +10,9 @@ class FirstClass:
         return f"FirstClass processed: {duplicated}"
     
 class SecondClass:
-    def duplicate(self, x):
-        """Static method to duplicate input."""
-        return [x, x]  
-    
     def display(self, item):
         """Instance method to duplicate input."""
-        duplicated = self.duplicate(item)
+        duplicated = FirstClass.duplicate(item)
         return f"SecondClass displayed: {duplicated}"
     
     def print_example(self):

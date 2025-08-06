@@ -10,7 +10,7 @@ class FirstClass:
 
 
 class SecondClass(FirstClass):     
-    def display(self, item):
+    def present(self, item):
         """Uses duplicate() in a different way."""
         duplicated = self.duplicate(item)
         return f"SecondClass displayed: {duplicated}"

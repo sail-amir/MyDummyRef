@@ -1,8 +1,10 @@
-class FirstClass:
+class ZeroClass:
     def duplicate(self, x):
         """Creates a duplicate (copy) of the input."""
-        return [x, x]  # Same implementation in both classes
-    
+        return [x, x]
+
+class FirstClass(ZeroClass):
+   
     def process(self, data):
         """Uses duplicate() to process data."""
         duplicated = self.duplicate(data)

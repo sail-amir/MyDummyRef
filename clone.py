@@ -1,20 +1,17 @@
+class Duplicator:
+    @staticmethod
+    def duplicate(x):
+        """Static method to duplicate input."""
+        return [x, x]
+
 class FirstClass:
-    def duplicate(self, x):
-        """Creates a duplicate (copy) of the input."""
-        return [x, x]  # Same implementation in both classes
-    
     def process(self, data):
-        """Uses duplicate() to process data."""
-        duplicated = self.duplicate(data)
+        """Uses Duplicator.duplicate() to process data."""
+        duplicated = Duplicator.duplicate(data)
         return f"FirstClass processed: {duplicated}"
 
-
 class SecondClass:
-    def duplicate(self, x):
-        """Same implementation as in FirstClass."""
-        return [x, x]  # Exact clone of FirstClass.duplicate()
-    
     def display(self, item):
-        """Uses duplicate() in a different way."""
-        duplicated = self.duplicate(item)
+        """Uses Duplicator.duplicate() in a different way."""
+        duplicated = Duplicator.duplicate(item)
         return f"SecondClass displayed: {duplicated}"

@@ -10,7 +10,7 @@ class FirstClass:
         print('hi')    
         print('bye')
 
-class SecondClass(FirstClass):
+class ThirdClass(FirstClass):
     def display(self, item):
         """Uses FirstClass.duplicate() in a different way."""
         duplicated = Utils.duplicate(item)
